@@ -67,7 +67,7 @@ export const MediaPlayer = () => {
                         <Grid sx={{ width: "100%", height: "10%" }}>
                             <CloseIcon sx={{ height: 50, width: 50, marginLeft: 2, cursor: "pointer" }} onClick={() => dispatch(closeMediaplayer())} />
                         </Grid>
-                        <Grid sx={{ width: "100%", height: "90%" }}>
+                        <Grid sx={{width: "100%", height:"90%"}}>
                             <ReactPlayer width={"100%"} height={"100%"} controls={true} url={mediaPlayerState.response !== null ? mediaPlayerState.response.ContentUrl : ""} />
                         </Grid>
                     </StyledGrid>

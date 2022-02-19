@@ -14,5 +14,7 @@ export const StyledGrid = styled(Grid)`
         z-index:2;
         background-color:black;
         color:white;
+        background-color:black;
+        overflow:hidden;
     }
 `

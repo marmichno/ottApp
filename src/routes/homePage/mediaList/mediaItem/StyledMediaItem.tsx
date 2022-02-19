@@ -10,6 +10,7 @@ export const StyledGrid = styled(Grid)`
         align-items:center; 
         text-align:center;
         margin: 5px;
+        height: 100%;
         aspect-ratio: 16 / 9;
     }
 `

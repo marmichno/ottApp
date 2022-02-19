@@ -39,7 +39,7 @@ export const MediaList = ({ mediaList }: { mediaList: PostMediaListResponse }) =
                         </Typography>
                     </Grid>
                     <Grid sx={{ width: "100%", height: "80%" }}>
-                        <StyledScrollContainer>
+                        <StyledScrollContainer vertical={false}>
                             {mediaList.Entities.map(val => {
                                 let imageFrame = val.Images.map(val => {
                                     if (val.ImageTypeCode === 'FRAME') {

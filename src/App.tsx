@@ -1,6 +1,5 @@
 // css
 import './App.css';
-// mui
 // default routes
 import { ProtectedRoutes } from './routes/defaultRoutes/defaultRoutes/protectedRoutes/ProtectedRoutes';
 import { PageNotFound } from './routes/defaultRoutes/defaultRoutes/pageNotFound/PageNotFound';
