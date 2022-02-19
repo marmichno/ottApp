@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+// css
 import './App.css';
+// mui
+// default routes
+import { ProtectedRoutes } from './routes/defaultRoutes/defaultRoutes/protectedRoutes/ProtectedRoutes';
+import { PageNotFound } from './routes/defaultRoutes/defaultRoutes/pageNotFound/PageNotFound';
+// components
+import { SignInPage } from './routes/signInPage/SignInPage';
+import { Splash } from './routes/splashPage/Splash';
+import { HomePage } from './routes/homePage/HomePage';
+// router
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Splash />} />
+        <Route path="/sign-in" element={<SignInPage />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/home" element={<HomePage />} />
+        </Route>
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </Router>
   );
 }
 
